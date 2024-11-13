@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ucar 중고차 홈페이지</title>
+  <style>
+    /* 기본 스타일 */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    /* 상단 네비게이션 바 */
+    .top-bar {
+      background-color: #f0f0f0;
+      padding: 5px 20px;
+      font-size: 0.9em;
+      text-align: right;
+    }
+
+    .top-bar span {
+      margin-left: 20px;
+    }
+
+    /* 메인 헤더 */
+    header {
+      background-color: #fff;
+      padding: 10px 20px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header h1 {
+      font-size: 2em;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    /* 메인 메뉴 */
+    .main-menu {
+      display: flex;
+      justify-content: center;
+      background-color: #ffffff;
+      padding: 10px 0;
+      border-bottom: 3px solid #ffd700;
+    }
+
+    .main-menu a {
+      margin: 0 15px;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .main-menu a:hover {
+      color: #000;
+    }
+
+    /* Best 섹션 */
+    .best-section {
+      background-color: #ffd700;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    /* 차량 이미지 및 검색 섹션 */
+    .search-section {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .car-images {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .car-images img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .search-filters select, .search-filters button {
+      padding: 10px;
+      margin: 0 5px;
+      font-size: 1em;
+      border-radius: 5px;
+    }
+
+    .search-filters button {
+      background-color: #ff4d4d;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .search-filters button:hover {
+      background-color: #e60000;
+    }
+
+    /* 추천 차량 섹션 */
+    .recommend-section {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .recommend-section h2 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    .recommend-cars {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .recommend-car {
+      width: 300px;
+      height: 200px;
+      background-color: #e0e0e0;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2em;
+      color: #999;
+    }
+
+    /* 푸터 */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      font-size: 0.9em;
+      text-align: center;
+    }
+
+    footer div {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 상단바 -->
+  <div class="top-bar">
+    즐겨찾기 커뮤니티 <span>로그인/회원가입/마이페이지</span>
+  </div>
+
+  <!-- 헤더 -->
+  <header>
+    <h1>Ucar</h1>
+  </header>
+
+  <!-- 네비게이션 메뉴 -->
+  <nav class="main-menu">
+    <a href="#">내차팔기</a>
+    <a href="#">내차사기</a>
+    <a href="#">렌트</a>
+    <a href="#">금융</a>
+    <a href="#">미디어</a>
+  </nav>
+
+  <!-- Best 섹션 -->
+  <div class="best-section">
+    Best
+  </div>
+
+  <!-- 차량 이미지 및 검색 섹션 -->
+  <div class="search-section">
+    <div class="car-images">
+      <img src="https://via.placeholder.com/200x150" alt="Car 1">
+      <img src="https://via.placeholder.com/200x150" alt="Car 2">
+      <img src="https://via.placeholder.com/200x150" alt="Car 3">
+    </div>
+    <h2>원하는 차량 조회</h2>
+    <div class="search-filters">
+      <select>
+        <option>국산</option>
+        <option>수입</option>
+      </select>
+      <select>
+        <option>제조사</option>
+        <option>현대</option>
+        <option>기아</option>
+      </select>
+      <select>
+        <option>모델</option>
+      </select>
+      <select>
+        <option>세부모델</option>
+      </select>
+      <button>검색하기</button>
+    </div>
+  </div>
+
+  <!-- 추천 차량 섹션 -->
+  <div class="recommend-section">
+    <h2>Recommend Car</h2>
+    <div class="recommend-cars">
+      <div class="recommend-car">추천 차량 1</div>
+      <div class="recommend-car">추천 차량 2</div>
+    </div>
+  </div>
+
+  <!-- 푸터 -->
+  <footer>
+    <div>CUSTOMER CENTER TEL 000 0000 0000</div>
+    <div>BANK ACCOUNT DD은행 000000000</div>
+    <div>RETURN / EXCHANGE 서울특별시 강남구 테헤란로 0000</div>
+    <div>유카 (UCAR) TEL. 000 0000 0000 OWNER. NNN</div>
+    <div>COPYRIGHT © 유카 주식회사 ALL RIGHTS RESERVED.</div>
+  </footer>
+
+</body>
+</html>
