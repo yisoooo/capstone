@@ -6,6 +6,7 @@
   <title>Ucar 중고차 홈페이지</title>
   <style>
     /* 기본 스타일 */
+    
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -13,12 +14,17 @@
       background-color: #f9f9f9;
     }
 
+    .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
     /* 상단 네비게이션 바 */
     .top-bar {
       background-color: #f0f0f0;
       padding: 5px 20px;
       font-size: 0.9em;
-      text-align: right;
+      text-align: center;
     }
 
     .top-bar span {
@@ -27,25 +33,47 @@
 
     /* 메인 헤더 */
     header {
-      background-color: #fff;
-      padding: 10px 20px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
-    }
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    header h1 {
-      font-size: 2em;
-      margin: 0;
-      font-weight: bold;
-    }
+        .search-bar {
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            padding: 5px 15px;
+            display: flex;
+            align-items: center;
+        }
+        .search-bar input {
+            border: none;
+            outline: none;
+        }
+        .search-bar input::placeholder {
+            color: #aaa;
+        }
 
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+        nav a:hover {
+            color: #007bff;
+        }
     /* 메인 메뉴 */
     .main-menu {
       display: flex;
       justify-content: center;
       background-color: #ffffff;
       padding: 10px 0;
-      border-bottom: 3px solid #ffd700;
+      border-bottom: 3px solid #60cfff;
     }
 
     .main-menu a {
@@ -61,7 +89,7 @@
 
     /* Best 섹션 */
     .best-section {
-      background-color: #ffd700;
+      background-color: #60cfff;
       padding: 20px 0;
       text-align: center;
       font-size: 1.5em;
@@ -138,38 +166,41 @@
 
     /* 푸터 */
     footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      font-size: 0.9em;
-      text-align: center;
-    }
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            position:fixed;
+            bottom : 0;
+            width:100%
+        }
+        footer div {
+            margin: 5px 0;
+        }
 
     footer div {
-      margin: 5px 0;
+     margin: 5px ;
     }
   </style>
 </head>
 <body>
 
-  <!-- 상단바 -->
-  <div class="top-bar">
-    즐겨찾기 커뮤니티 <span>로그인/회원가입/마이페이지</span>
-  </div>
 
-  <!-- 헤더 -->
+
   <header>
-    <h1>Ucar</h1>
-  </header>
-
-  <!-- 네비게이션 메뉴 -->
-  <nav class="main-menu">
-    <a href="#">내차팔기</a>
-    <a href="#">내차사기</a>
-    <a href="#">렌트</a>
-    <a href="#">금융</a>
-    <a href="#">미디어</a>
-  </nav>
+    <div class="logo">UCAR</div>
+    <nav>
+        <a href="#">내차팔기</a>
+        <a href="#">내차사기</a>
+        <a href="lentcar.html">렌트</a>
+        <a href="#">금융</a>
+        <a href="#">미디어</a>
+    </nav>
+    <div class="search-bar">
+        <input type="text" placeholder="검색">
+    </div>
+</header>
 
   <!-- Best 섹션 -->
   <div class="best-section">
@@ -193,9 +224,14 @@
         <option>제조사</option>
         <option>현대</option>
         <option>기아</option>
+        <option>KGM</option>
+        <option>쌍용</option>
       </select>
       <select>
         <option>모델</option>
+        <option>SUV</option>
+        <option>중형</option>
+        <option>대형</option>
       </select>
       <select>
         <option>세부모델</option>
