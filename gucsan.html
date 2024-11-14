@@ -25,20 +25,49 @@
       margin-left: 20px;
     }
 
-    /* 헤더 */
+    .logo {
+            font-size: 40px;
+            font-weight: bold;
+            color: #333;
+        }
+
+    /* 메인 헤더 */
     header {
-      background-color: #fff;
-      padding: 10px 20px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
-    }
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    header h1 {
-      font-size: 2em;
-      margin: 0;
-      font-weight: bold;
-    }
+        .search-bar {
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            padding: 5px 15px;
+            display: flex;
+            align-items: center;
+        }
+        .search-bar input {
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+        .search-bar input::placeholder {
+            color: #676767;
+        }
 
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+        nav a:hover {
+            color: #007bff;
+        }
     /* 메인 메뉴 */
     .main-menu {
       display: flex;
@@ -137,25 +166,19 @@
 </head>
 <body>
 
-  <!-- 상단바 -->
-  <div class="top-bar">
-    즐겨찾기 커뮤니티 <span>로그인/회원가입/마이페이지</span>
-  </div>
-
-  <!-- 헤더 -->
   <header>
-    <h1>Ucar</h1>
-  </header>
-
-  <!-- 네비게이션 메뉴 -->
-  <nav class="main-menu">
-    <a href="#">내차팔기</a>
-    <a href="#">내차사기</a>
-    <a href="#">렌트</a>
-    <a href="#">금융</a>
-    <a href="#">미디어</a>
-  </nav>
-
+    <div class="logo">UCAR</div>
+    <nav>
+        <a href="#">내차팔기</a>
+        <a href="#">내차사기</a>
+        <a href="lentcar.html">렌트</a>
+        <a href="#">금융</a>
+        <a href="#">미디어</a>
+    </nav>
+    <div class="search-bar">
+        <input type="text" placeholder="검색">
+    </div>
+</header>
   <!-- 컨테이너 -->
   <div class="container">
     <!-- 왼쪽 필터 패널 -->
