@@ -125,6 +125,78 @@
             margin: 5px 0;
         }
 
+    
+
+
+       /* 보험료 조회 버튼 스타일 */
+       .insurance-button {
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      padding: 8px 15px;
+      background-color: #00bfffc4;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .insurance-button:hover {
+      background-color: #007bff;
+    }
+
+    /* 보험료 링크 섹션 스타일 */
+    .insurance-links {
+      display: none;
+      position: fixed;
+      top: 50%;
+      right: 60px;
+      transform: translateY(-50%);
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 200px;
+      padding: 10px;
+    }
+
+    .insurance-links h3 {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #333;
+      text-align: center;
+    }
+
+    .insurance-links a {
+      display: block;
+      font-size: 12px;
+      color: #007bff;
+      text-decoration: none;
+      margin: 5px 0;
+      text-align: center;
+    }
+
+    .insurance-links a:hover {
+      text-decoration: underline;
+    }
+
+    .insurance-links .close-btn {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 12px;
+      color: #333;
+      cursor: pointer;
+    }
+
+    .insurance-links .close-btn:hover {
+      color: #007bff;
+    }
+
   </style>
 </head>
 
@@ -157,6 +229,31 @@
     <p>할부는 차량 금액을 나누어 부담하고, 리스는 초기 비용을 줄이고 유연하게 이용할 수 있습니다.</p>
   </div>
 
+   <!-- 보험료 조회 버튼 -->
+  <button class="insurance-button" onclick="toggleInsuranceLinks()">보험료 조회</button>
+
+<!-- 보험료 링크 섹션 -->
+<div class="insurance-links" id="insuranceLinks">
+  <h3>보험사 링크</h3>
+  <a href="https://www.directdb.co.kr/at/prd/atarc/step1/formStepPreView.do?src=adwords&kw=0299B4&partner_code=C457&keyword=KGM00049&utm_source=google_pc&utm_medium=cpc_2&utm_campaign=nhnad&utm_term=DB%EB%8B%A4%EC%9D%B4%EB%A0%89%ED%8A%B8%EC%9E%90%EB%8F%99%EC%B0%A8%EB%B3%B4%ED%97%98&nbsrc=adwords_g&nbkw=db%EB%8B%A4%EC%9D%B4%EB%A0%89%ED%8A%B8%EC%9E%90%EB%8F%99%EC%B0%A8%EB%B3%B4%ED%97%98&gad_source=1&gclid=CjwKCAiArva5BhBiEiwA-oTnXUgFiydlo781aUXQ8JxNuP2aME779i_HXiXUD5cZV3sJGZYaYS42FxoC1jQQAvD_BwE" target="_blank">DB손해보험 다이렉트</a>
+  <a href="https://direct.samsungfire.com/ria/pc/product/car/?state=Front&gclid=CjwKCAiArva5BhBiEiwA-oTnXSf3gfYKbB1qrFnNDKL91WsfJJDFwqqnNV66DED7umc6gnrz29SIPBoCWMgQAvD_BwE" target="_blank">삼성화제 다이렉트</a>
+  <a href="http://directcarbohum.com/?md=googledirectcarbohum_PC&gclid=CjwKCAiArva5BhBiEiwA-oTnXXmAZgKiVcFnfhRGtzs1xZBG9AwLsd9x4dnFHZ40dipm3VpD_lCX9RoC13oQAvD_BwE" target="_blank">메리츠손해보험 다이렉트</a>
+  <a href="https://kb-direct.co.kr/?inType=5&gad_source=1&gclid=CjwKCAiArva5BhBiEiwA-oTnXdrke2qUXS7PpbakB3SiRoeCYdUhf6s6YOHILbPUs2NY7N62kxhr0xoC-YkQAvD_BwE" target="_blank">KB손해보험 다이렉트</a>
+  <a href="https://direct.hi.co.kr/service.do?m=28680681ee&HDMS1=cpc&HDMS2=google&HDMS3=listing&HDMS4=%ED%98%84%EB%8C%80%ED%95%B4%EC%83%81%EB%8B%A4%EC%9D%B4%EB%A0%89%ED%8A%B8%EC%9E%90%EB%8F%99%EC%B0%A8%EB%B3%B4%ED%97%98_brand&utm_source=google&utm_medium=cpc&utm_campaign=%EC%9E%90%EB%8F%99%EC%B0%A8%EB%B3%B4%ED%97%98&utm_term=%ED%98%84%EB%8C%80%ED%95%B4%EC%83%81%EB%8B%A4%EC%9D%B4%EB%A0%89%ED%8A%B8%EC%9E%90%EB%8F%99%EC%B0%A8%EB%B3%B4%ED%97%98_brand&gad_source=1&gclid=CjwKCAiArva5BhBiEiwA-oTnXRX80GLz5CyorLdKHAMj9uAKTLNLV910-GcShBr65-8i4a10apifuxoCydsQAvD_BwE" target="_blank">현대해상 다이렉트</a>
+  <span class="close-btn" onclick="toggleInsuranceLinks()">닫기</span>
+</div>
+
+<script>
+  // 보험료 링크 토글 기능
+  function toggleInsuranceLinks() {
+    const linksSection = document.getElementById('insuranceLinks');
+    if (linksSection.style.display === 'none' || linksSection.style.display === '') {
+      linksSection.style.display = 'block';
+    } else {
+      linksSection.style.display = 'none';
+    }
+  }
+  </script>
   <!-- 푸터 -->
 <footer>
     <div>CUSTOMER CENTER: TEL 000-0000-0000 | BANK ACCOUNT: 0000000000 | RETURN/EXCHANGE: 서울특별시 강남구 테헤란로 000</div>
