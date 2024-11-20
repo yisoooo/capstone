@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>할부 및 리스</title>
+  <style>
+    /* 기본 스타일 */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    /* 상단 네비게이션 바 */
+    .top-bar {
+      background-color: #f0f0f0;
+      padding: 5px 20px;
+      font-size: 0.9em;
+      text-align: right;
+    }
+
+    .top-bar span {
+      margin-left: 20px;
+      cursor: pointer;
+    }
+    .logo {
+            font-size: 40px;
+            font-weight: bold;
+            color: #333;
+        }
+
+    /* 메인 헤더 */
+    header {
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .search-bar {
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            padding: 5px 15px;
+            display: flex;
+            align-items: center;
+        }
+        .search-bar input {
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+        .search-bar input::placeholder {
+            color: #676767;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+        nav a:hover {
+            color: #007bff;
+        }
+
+    /* 할부 및 리스 섹션 스타일 */
+    .finance-section {
+      text-align: center;
+      padding: 30px;
+      background-color: #f7f7f7;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .finance-section h2 {
+      font-size: 24px;
+      color: #333;
+    }
+
+    .finance-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .finance-tabs .tab {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #00bfffc4;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .finance-tabs .tab:hover {
+      background-color: #007bff;
+    }
+
+    .finance-section p {
+      font-size: 14px;
+      color: #555;
+      margin-top: 10px;
+    }
+     /* 푸터 */
+     footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            position:fixed;
+            bottom : 0;
+            width:100%
+        }
+        footer div {
+            margin: 5px 0;
+        }
+
+  </style>
+</head>
+
+<body>
+
+    
+<!-- 헤더 -->
+<header>
+    <div class="logo">UCAR</div>
+    <nav>
+        <a href="gucsan.html">내차팔기</a>
+        <a href="#">내차사기</a>
+        <a href="lentcar.html">렌트</a>
+        <a href="#">금융</a>
+        <a href="#">미디어</a>
+        <a href="mypage.html">마이페이지</a>
+    </nav>
+    <div class="search-bar">
+        <input type="text" placeholder="검색">
+    </div>
+</header>
+
+  <!-- 할부 및 리스 섹션 -->
+  <div class="finance-section">
+    <h2>내 상황에 딱 맞춘 나만의 금융 설계</h2>
+    <div class="finance-tabs">
+      <a href="https://example.com/installment" target="_blank" class="tab">할부</a>
+      <a href="https://example.com/lease" target="_blank" class="tab">리스</a>
+    </div>
+    <p>할부는 차량 금액을 나누어 부담하고, 리스는 초기 비용을 줄이고 유연하게 이용할 수 있습니다.</p>
+  </div>
+
+  <!-- 푸터 -->
+<footer>
+    <div>CUSTOMER CENTER: TEL 000-0000-0000 | BANK ACCOUNT: 0000000000 | RETURN/EXCHANGE: 서울특별시 강남구 테헤란로 000</div>
+    <div>COPYRIGHT © 유카 주식회사. ALL RIGHTS RESERVED.</div>
+</footer>
+
+</body>
+</html>
